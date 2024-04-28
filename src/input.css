@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+
+@layer components {
+  .snap-feature {
+    @apply snap-y snap-mandatory h-screen overflow-y-scroll transition-all duration-500 scroll-smooth;
+  }
+  .nav-bar {
+    @apply flex justify-between items-center w-full h-[70px] px-6 fixed top-0 z-10 bg-transparent;
+  }
+  .nav-items {
+    @apply text-[0.938rem] font-semibold text-[rgb(15,23,42)] px-3 py-2 bg-transparent rounded-3xl duration-500 hover:bg-[rgb(203,213,225)];
+  }
+  .car-section {
+    @apply relative w-full h-screen snap-always snap-start;
+  }
+  .car-image {
+    @apply w-full h-screen object-cover;
+  }
+  .car-ditails {
+    @apply absolute top-[20%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center;
+  }
+  .car-model {
+    @apply text-4xl leading-[3rem] font-semibold text-[rgb(30,41,59)];
+  }
+  .car-tagLine {
+    @apply text-[0.938rem] font-normal text-[rgb(30,41,59)];
+  }
+  .car-buttons {
+    @apply absolute bottom-[6%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center flex flex-col gap-2 sm:flex-row sm:bottom-[16%];
+  }
+  .btn {
+    @apply inline-block w-60 px-8 py-3 mx-1 rounded-3xl text-[0.813rem] font-medium uppercase text-white bg-[rgb(55,65,81)];
+  }
+  .btn-inventory {
+    @apply bg-[rgb(241,245,249)] text-[rgb(75,77,79)];
+  }
+  .down-arrow {
+    @apply absolute bottom-[5%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center;
+  }
+}
